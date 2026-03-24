@@ -217,7 +217,7 @@ export const ja = {
         title: "日付範囲",
         referenceDate: {
           title: "基準日",
-          placeholder: "YYYY-MM-DD",
+          placeholder: "YYYY-MM-DD or this.property",
         },
         focus: {
           title: "フォーカス",

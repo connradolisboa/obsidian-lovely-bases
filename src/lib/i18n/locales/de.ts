@@ -217,7 +217,7 @@ export const de = {
         title: "Datumsbereich",
         referenceDate: {
           title: "Referenzdatum",
-          placeholder: "JJJJ-MM-TT",
+          placeholder: "JJJJ-MM-TT or this.property",
         },
         focus: {
           title: "Fokus",

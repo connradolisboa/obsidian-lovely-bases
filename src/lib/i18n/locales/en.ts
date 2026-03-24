@@ -298,7 +298,7 @@ export const en = {
         title: "Date Range",
         referenceDate: {
           title: "Reference Date",
-          placeholder: "YYYY-MM-DD",
+          placeholder: "YYYY-MM-DD or this.property",
         },
         focus: {
           title: "Focus",

@@ -10,6 +10,7 @@
     "dev": "node esbuild.config.mjs",
     "dev:plugin": "node scripts/dev-install.mjs",
     "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production && npm run css:build && node scripts/scope.js",
+    "dist": "node esbuild.config.mjs production && npm run css:build && node scripts/scope.js && cp build/lovely-bases/main.js build/lovely-bases/styles.css build/lovely-bases/manifest.json dist/",
     "build:dev": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs && npm run css:build && node scripts/scope.js",
     "test": "vitest --project storybook",
     "version": "node version-bump.mjs && git add manifest.json versions.json",

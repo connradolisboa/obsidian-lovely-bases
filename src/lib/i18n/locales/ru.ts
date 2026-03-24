@@ -217,7 +217,7 @@ export const ru = {
         title: "Диапазон Дат",
         referenceDate: {
           title: "Базовая Дата",
-          placeholder: "ГГГГ-ММ-ДД",
+          placeholder: "ГГГГ-ММ-ДД or this.property",
         },
         focus: {
           title: "Фокус",

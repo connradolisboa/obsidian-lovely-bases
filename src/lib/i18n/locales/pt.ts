@@ -217,7 +217,7 @@ export const pt = {
         title: "Intervalo de Datas",
         referenceDate: {
           title: "Data de Referência",
-          placeholder: "AAAA-MM-DD",
+          placeholder: "AAAA-MM-DD or this.property",
         },
         focus: {
           title: "Foco",

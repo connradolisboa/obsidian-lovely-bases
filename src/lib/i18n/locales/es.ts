@@ -217,7 +217,7 @@ export const es = {
         title: "Rango de Fechas",
         referenceDate: {
           title: "Fecha de Referencia",
-          placeholder: "YYYY-MM-DD",
+          placeholder: "YYYY-MM-DD or this.property",
         },
         focus: {
           title: "Enfoque",

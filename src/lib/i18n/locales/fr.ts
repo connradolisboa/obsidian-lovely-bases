@@ -217,7 +217,7 @@ export const fr = {
         title: "Plage de Dates",
         referenceDate: {
           title: "Date de Référence",
-          placeholder: "AAAA-MM-JJ",
+          placeholder: "AAAA-MM-JJ or this.property",
         },
         focus: {
           title: "Focus",

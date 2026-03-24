@@ -217,7 +217,7 @@ export const zh = {
         title: "日期范围",
         referenceDate: {
           title: "参考日期",
-          placeholder: "YYYY-MM-DD",
+          placeholder: "YYYY-MM-DD or this.property",
         },
         focus: {
           title: "焦点",

@@ -217,7 +217,7 @@ export const ko = {
         title: "날짜 범위",
         referenceDate: {
           title: "기준 날짜",
-          placeholder: "YYYY-MM-DD",
+          placeholder: "YYYY-MM-DD or this.property",
         },
         focus: {
           title: "포커스",
