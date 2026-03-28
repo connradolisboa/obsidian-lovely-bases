@@ -12,4 +12,5 @@ export const DEFAULT_BASE_CONFIG: LinearCalendarConfig = {
   propertiesShowNames: true,
   ganttTitleSize: 12,
   ganttPropertiesSize: 9,
+  ganttShowFixedColumn: true,
 };

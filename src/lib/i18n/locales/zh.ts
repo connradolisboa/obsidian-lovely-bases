@@ -270,7 +270,7 @@ export const zh = {
         titleProperty: {
           title: "标题属性",
         },
-      },
+          },
       dateRange: {
         title: "日期范围",
         referenceDate: {
@@ -310,6 +310,9 @@ export const zh = {
         },
         ganttPropertiesSize: {
           title: "属性大小",
+        },
+        ganttShowFixedColumn: {
+          title: "Show Fixed Column",
         },
       },
     },

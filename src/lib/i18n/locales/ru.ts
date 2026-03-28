@@ -270,7 +270,7 @@ export const ru = {
         titleProperty: {
           title: "Свойство Заголовка",
         },
-      },
+          },
       dateRange: {
         title: "Диапазон Дат",
         referenceDate: {
@@ -310,6 +310,9 @@ export const ru = {
         },
         ganttPropertiesSize: {
           title: "Размер Свойств",
+        },
+        ganttShowFixedColumn: {
+          title: "Show Fixed Column",
         },
       },
     },

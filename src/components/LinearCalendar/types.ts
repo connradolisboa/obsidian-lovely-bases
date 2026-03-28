@@ -33,4 +33,5 @@ export type LinearCalendarConfig = {
   propertiesShowNames: boolean;
   ganttTitleSize: number;
   ganttPropertiesSize: number;
+  ganttShowFixedColumn: boolean;
 };

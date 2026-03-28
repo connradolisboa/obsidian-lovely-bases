@@ -270,7 +270,7 @@ export const fr = {
         titleProperty: {
           title: "Propriété de Titre",
         },
-      },
+          },
       dateRange: {
         title: "Plage de Dates",
         referenceDate: {
@@ -310,6 +310,9 @@ export const fr = {
         },
         ganttPropertiesSize: {
           title: "Taille des Propriétés",
+        },
+        ganttShowFixedColumn: {
+          title: "Show Fixed Column",
         },
       },
     },

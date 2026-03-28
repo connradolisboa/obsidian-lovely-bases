@@ -1,5 +1,6 @@
 import type { BasesPropertyId, BasesViewConfig } from "obsidian";
 
+import { useOpenDailyNote } from "@/hooks/use-open-daily-note";
 import { cn } from "@/lib/utils";
 import type { EntryClickEventHandler } from "@/types";
 
@@ -36,6 +37,7 @@ export default function MonthRow({
   propertiesShowNames,
   visibleProperties,
 }: Props) {
+  const openDailyNote = useOpenDailyNote();
   const monthName = getMonthName(monthIndex);
   const formattedMonthName =
     monthName.charAt(0).toUpperCase() + monthName.slice(1);
@@ -67,7 +69,12 @@ export default function MonthRow({
       </div>
       <div className="grow relative flex">
         {/* Grid Background */}
-        <Grid monthIndex={monthIndex} daysCount={daysCount} currentYear={currentYear} />
+        <Grid
+          monthIndex={monthIndex}
+          daysCount={daysCount}
+          currentYear={currentYear}
+          onDayClick={(day, e) => openDailyNote(new Date(currentYear, monthIndex, day), e)}
+        />
 
         {/* Events Layer */}
         <div className="absolute inset-0 w-full h-full z-10 mt-1">

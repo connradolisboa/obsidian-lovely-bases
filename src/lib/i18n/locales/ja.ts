@@ -270,7 +270,7 @@ export const ja = {
         titleProperty: {
           title: "タイトルプロパティ",
         },
-      },
+          },
       dateRange: {
         title: "日付範囲",
         referenceDate: {
@@ -310,6 +310,9 @@ export const ja = {
         },
         ganttPropertiesSize: {
           title: "プロパティサイズ",
+        },
+        ganttShowFixedColumn: {
+          title: "Show Fixed Column",
         },
       },
     },

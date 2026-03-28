@@ -270,7 +270,7 @@ export const ko = {
         titleProperty: {
           title: "제목 속성",
         },
-      },
+          },
       dateRange: {
         title: "날짜 범위",
         referenceDate: {
@@ -310,6 +310,9 @@ export const ko = {
         },
         ganttPropertiesSize: {
           title: "속성 크기",
+        },
+        ganttShowFixedColumn: {
+          title: "Show Fixed Column",
         },
       },
     },

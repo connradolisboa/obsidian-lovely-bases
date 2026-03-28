@@ -30,6 +30,7 @@ const LinearCalendarView = ({
     propertiesShowNames: true,
     ganttTitleSize: 12,
     ganttPropertiesSize: 9,
+    ganttShowFixedColumn: true,
   });
 
   const resolvedDate = useActiveFileProp(linearCalendarConfig.date);

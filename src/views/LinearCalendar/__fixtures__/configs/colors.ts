@@ -12,4 +12,5 @@ export const COLORS_ICONS_BASE_CONFIG: LinearCalendarConfig = {
   propertiesShowNames: true,
   ganttTitleSize: 12,
   ganttPropertiesSize: 9,
+  ganttShowFixedColumn: true,
 };
