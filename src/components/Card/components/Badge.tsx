@@ -7,9 +7,9 @@ import LucideIcon from "@/components/Obsidian/LucideIcon";
 import {
   contrastColor,
   darken,
-  isHexColor,
   lighten,
   luminance,
+  resolveColor,
 } from "@/lib/colors";
 import { getPropertyValue } from "@/lib/obsidian/entry";
 import { cn } from "@/lib/utils";
@@ -78,7 +78,8 @@ const getBadgeStyles = (
   color: string | null,
   badgesFont: string | undefined,
 ): React.CSSProperties => {
-  if (!color || !isHexColor(color)) {
+  const resolved = color ? resolveColor(color) : undefined;
+  if (!resolved) {
     return {
       backgroundColor: "rgba(0, 0, 0, 0.3)",
       color: "var(--color-white)",
@@ -87,12 +88,12 @@ const getBadgeStyles = (
     };
   }
 
-  const l = luminance(color);
-  const borderColor = l > 0.5 ? darken(color, 0.2) : lighten(color, 0.2);
+  const l = luminance(resolved);
+  const borderColor = l > 0.5 ? darken(resolved, 0.2) : lighten(resolved, 0.2);
 
   return {
-    backgroundColor: color,
-    color: contrastColor(color),
+    backgroundColor: resolved,
+    color: contrastColor(resolved),
     borderColor: borderColor,
     fontFamily: badgesFont,
   };

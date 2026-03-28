@@ -315,6 +315,14 @@ export const en = {
         iconProperty: {
           title: "Icon Property",
         },
+        propertiesLayout: {
+          title: "Properties Layout",
+          vertical: "Vertical",
+          horizontal: "Horizontal",
+        },
+        propertiesShowNames: {
+          title: "Show Property Names",
+        },
       },
     },
   },
@@ -348,11 +356,11 @@ export const en = {
         title: "Date Range",
         startDate: {
           title: "Start Date",
-          placeholder: "YYYY-MM-DD",
+          placeholder: "YYYY-MM-DD or this.property",
         },
         endDate: {
           title: "End Date",
-          placeholder: "YYYY-MM-DD",
+          placeholder: "YYYY-MM-DD or this.property",
         },
       },
       display: {

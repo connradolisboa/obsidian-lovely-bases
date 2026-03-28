@@ -1,4 +1,4 @@
-import type { ViewOption } from "obsidian";
+import type { ViewOption } from "@/lib/view-option-types";
 import type { LinearCalendarConfig } from "@/components/LinearCalendar/types";
 import { detectLocale, type NamespacedTranslationKey, translate } from "@/lib/i18n";
 
@@ -16,6 +16,9 @@ export const DEFAULTS: LinearCalendarConfig = {
   /* Appearance */
   colorProperty: undefined,
   iconProperty: undefined,
+  /* Properties */
+  propertiesLayout: "vertical",
+  propertiesShowNames: true,
 };
 
 export const LINEAR_CALENDAR_OPTIONS: ViewOption[] = [
@@ -82,6 +85,22 @@ export const LINEAR_CALENDAR_OPTIONS: ViewOption[] = [
         displayName: t("options.appearance.iconProperty.title"),
         key: "iconProperty",
         default: DEFAULTS.iconProperty,
+      },
+      {
+        type: "dropdown",
+        displayName: t("options.appearance.propertiesLayout.title"),
+        key: "propertiesLayout",
+        default: DEFAULTS.propertiesLayout,
+        options: {
+          vertical: t("options.appearance.propertiesLayout.vertical"),
+          horizontal: t("options.appearance.propertiesLayout.horizontal"),
+        },
+      },
+      {
+        type: "toggle",
+        displayName: t("options.appearance.propertiesShowNames.title"),
+        key: "propertiesShowNames",
+        default: DEFAULTS.propertiesShowNames,
       },
     ],
   },

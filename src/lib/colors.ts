@@ -294,6 +294,37 @@ export function saturate(color, amount = 0.1) {
   return formatColor({ ...rgb, a: c.a, format: c.format, hasAlpha: c.hasAlpha });
 }
 
+// Todoist-compatible named colors (by ID and name)
+const NAMED_COLORS: Record<string, string> = {
+  "30": "#B8255F", berry_red: "#B8255F",
+  "31": "#DC4C3E", red: "#DC4C3E",
+  "32": "#C77100", orange: "#C77100",
+  "33": "#B29104", yellow: "#B29104",
+  "34": "#949C31", olive_green: "#949C31",
+  "35": "#65A33A", lime_green: "#65A33A",
+  "36": "#369307", green: "#369307",
+  "37": "#42A393", mint_green: "#42A393",
+  "38": "#148FAD", teal: "#148FAD",
+  "39": "#319DC0", sky_blue: "#319DC0",
+  "40": "#6988A4", light_blue: "#6988A4",
+  "41": "#4180FF", blue: "#4180FF",
+  "42": "#692EC2", grape: "#692EC2",
+  "43": "#CA3FEE", violet: "#CA3FEE",
+  "44": "#A4698C", lavender: "#A4698C",
+  "45": "#E05095", magenta: "#E05095",
+  "46": "#C9766F", salmon: "#C9766F",
+  "47": "#808080", charcoal: "#808080",
+  "48": "#999999", grey: "#999999",
+  "49": "#8F7A69", taupe: "#8F7A69",
+};
+
+/** Resolves a color token (hex, named color, or Todoist ID) to a hex string. */
+export const resolveColor = (token: string): string | undefined => {
+  const t = token.trim();
+  if (isHexColor(t)) return t;
+  return NAMED_COLORS[t] ?? NAMED_COLORS[t.toLowerCase()] ?? undefined;
+};
+
 export function isHexColor(str): boolean {
   if (!str) return false;
   const hexColorRegex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;

@@ -1,5 +1,5 @@
 import type { Args } from "@storybook/react-vite"
-import type { ViewOption } from "obsidian";
+import type { ViewOption } from "@/lib/view-option-types";
 import { useEffect, useState } from "react";
 
 import LucideIcon from "@/components/Obsidian/LucideIcon";
@@ -17,9 +17,9 @@ const Code = ({
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    const keys = options.flatMap(opt => opt.type === 'group' ?
-      opt.items.map(i => i.key) :
-      opt.key
+    const keys = options.flatMap(opt => opt.type === 'group'
+      ? opt.items.flatMap(i => 'key' in i ? [(i as { key: string }).key] : [])
+      : [opt.key]
     );
 
     const lines = keys

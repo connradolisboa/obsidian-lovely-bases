@@ -5,4 +5,6 @@ export const ALT_VISUALIZATIONS_BASE_CONFIG: LinearCalendarConfig = {
   startDateProperty: "note.start_date",
   endDateProperty: "note.end_date",
   date: "2026",
+  propertiesLayout: "vertical",
+  propertiesShowNames: true,
 };

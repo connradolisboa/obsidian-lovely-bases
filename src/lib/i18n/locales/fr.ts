@@ -19,12 +19,34 @@ export const fr = {
         title: "Espacement",
       },
     },
+    background: {
+      title: 'Arrière-plan',
+      inferFrom: {
+        title: 'Déduire De',
+        active: 'Élément Actif',
+        'first-item': 'Premier Élément'
+      },
+      gradient: {
+        title: 'Dégradé',
+        dark: 'Sombre',
+        light: 'Clair',
+        none: 'Aucun'
+      },
+      property: {
+        title: 'Propriété'
+      }
+    },
     groups: {
       title: "Groupes",
       layout: {
         title: "Disposition",
         sections: "Sections",
         grid: "Grille",
+      },
+      direction: {
+        title: "Direction",
+        horizontal: "Horizontal",
+        vertical: "Vertical",
       },
       shape: {
         title: "Forme",
@@ -36,6 +58,12 @@ export const fr = {
         group: "Grouper",
         inline: "En ligne",
         hidden: "Masqué",
+      },
+      inferPropertiesFrom: {
+        title: "Déduire les Propriétés de",
+        none: "Aucun",
+        "first-item": "Premier Élément",
+        "linked-note": "Note Liée",
       },
       inferPropertiesFromLinkedNotes: {
         title: "Déduire les Propriétés des Notes Liées",
@@ -77,6 +105,7 @@ export const fr = {
         none: "Aucun",
         inside: "Intérieur",
         outside: "Extérieur",
+        layout: "Layout",
       },
       font: {
         title: "Famille de Police",
@@ -87,9 +116,17 @@ export const fr = {
       groupSubtitleProperty: {
         title: "Propriété de Sous-titre de Groupe",
       },
+      groupTitleFont: {
+        title: "Famille de Police du Groupe",
+      },
     },
     contents: {
       title: "Contenus",
+      position: {
+        title: "Position",
+        inside: "Intérieur",
+        layout: "Layout",
+      },
       visibility: {
         title: 'Visibilité du Contenu',
         always: 'Toujours Visible',
@@ -124,6 +161,9 @@ export const fr = {
         cover: "Couvrir",
         contain: "Contenir",
       },
+      thumbnail: {
+        title: "Propriété de Miniature",
+      },
     },
     colors: {
       title: "Couleurs",
@@ -136,6 +176,9 @@ export const fr = {
         content: "Contenu",
         both: "Les Deux",
       },
+      groupsProperty: {
+        title: "Propriété des Groupes",
+      },
     },
     icons: {
       title: "Icônes",
@@ -144,6 +187,9 @@ export const fr = {
       },
       fileExtensionAsFallback: {
         title: "Utiliser les Icônes d'Extension de Fichier comme Repli",
+      },
+      groupsProperty: {
+        title: "Propriété des Groupes",
       },
     },
     badges: {
@@ -166,6 +212,18 @@ export const fr = {
         inside: "Intérieur",
         outside: "Extérieur",
       }
+    },
+    active: {
+      title: 'Actif',
+      effect: {
+        title: 'Effet',
+        none: 'Aucun',
+        tilted: 'Incliné',
+        bordered: 'Bordé'
+      },
+      aspectRatio: {
+        title: "Ratio d'Aspect"
+      },
     },
     actions: {
       title: 'Actions',
@@ -234,6 +292,14 @@ export const fr = {
         iconProperty: {
           title: "Propriété d'Icône",
         },
+        propertiesLayout: {
+          title: "Disposition des Propriétés",
+          vertical: "Vertical",
+          horizontal: "Horizontal",
+        },
+        propertiesShowNames: {
+          title: "Afficher les Noms des Propriétés",
+        },
       },
     },
   },
@@ -267,11 +333,11 @@ export const fr = {
         title: "Plage de Dates",
         startDate: {
           title: "Date de Début",
-          placeholder: "AAAA-MM-JJ",
+          placeholder: "AAAA-MM-JJ or this.property",
         },
         endDate: {
           title: "Date de Fin",
-          placeholder: "AAAA-MM-JJ",
+          placeholder: "AAAA-MM-JJ or this.property",
         },
       },
       display: {
@@ -318,6 +384,16 @@ export const fr = {
         },
         colorScheme: {
           title: "Schéma de Couleurs",
+          custom: "Personnalisé",
+        },
+        contentScheme: {
+          title: "Contenu de Cellule",
+          none: "Aucun",
+          mood: "Mood",
+          food: "Food",
+          tree: "Tree",
+          numerical: "Nombres",
+          alphabetical: "Alphabet",
         },
         reverseColors: {
           title: "Inverser les Couleurs",
@@ -387,6 +463,32 @@ export const fr = {
           title: "Opacité de Remplissage",
         },
       },
+    },
+  },
+  navigation: {
+    back: "Retour",
+  },
+  groups: {
+    ungrouped: "Aucun",
+    totalItems: "{count} entrées",
+    singleItem: "{count} entrée",
+  },
+  colors: {
+    palettes: {
+      red: "Rouge",
+      orange: "Orange",
+      yellow: "Jaune",
+      green: "Vert",
+      cyan: "Cyan",
+      blue: "Bleu",
+      purple: "Violet",
+      magenta: "Magenta",
+    },
+    schemes: {
+      primary: "Primaire",
+      semaphor: "Sémaphore",
+      rainbow: "Arc-en-ciel",
+      contrast: "Contraste",
     },
   },
   common: {

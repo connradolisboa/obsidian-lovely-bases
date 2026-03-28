@@ -1,5 +1,5 @@
 
-import type { SliderOption } from "obsidian";
+import type { SliderOption } from "@/lib/view-option-types";
 
 type Props = {
   option: SliderOption;

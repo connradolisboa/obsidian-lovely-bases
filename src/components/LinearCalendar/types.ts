@@ -1,9 +1,10 @@
-import type { BasesPropertyId, TFile } from "obsidian";
+import type { BasesEntry, BasesPropertyId, TFile } from "obsidian";
 
 export type CalendarItem = {
   id: string;
   title: string;
   file: TFile;
+  entry: BasesEntry;
   startDate: Date;
   endDate: Date;
   color?: string;
@@ -27,4 +28,6 @@ export type LinearCalendarConfig = {
   colorProperty?: BasesPropertyId;
   iconProperty?: BasesPropertyId;
   date?: string;
+  propertiesLayout: "vertical" | "horizontal";
+  propertiesShowNames: boolean;
 };

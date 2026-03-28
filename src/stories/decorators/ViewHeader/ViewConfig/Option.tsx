@@ -1,5 +1,7 @@
 import type { Args } from "@storybook/react-vite";
-import type { BasesViewConfig, ViewOption } from "obsidian";
+import type { BasesViewConfig } from "obsidian";
+
+import type { ViewOption } from "@/lib/view-option-types";
 
 
 import Dropdown from "./Dropdown";
@@ -27,10 +29,10 @@ const Option = ({
     return (
       <Group group={option}>
         {option.items.map(
-          groupItem => (
+          (groupItem, idx) => (
             <Option args={args}
               config={config}
-              key={groupItem.key}
+              key={'key' in groupItem ? groupItem.key : idx}
               option={groupItem}
               updateArgs={updateArgs} />
           )

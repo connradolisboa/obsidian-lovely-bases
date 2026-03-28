@@ -1,4 +1,7 @@
 import type { BasesEntry } from "obsidian";
+
+import { resolveColor } from "@/lib/colors";
+
 import type { CalendarItem, LinearCalendarConfig } from "../types";
 
 export const useCalendarItems = (
@@ -30,7 +33,8 @@ export const useCalendarItems = (
       }
     }
 
-    const color = linearCalendarConfig.colorProperty ? entry.getValue(linearCalendarConfig.colorProperty)?.toString() : undefined;
+    const rawColor = linearCalendarConfig.colorProperty ? entry.getValue(linearCalendarConfig.colorProperty)?.toString() : undefined;
+    const color = rawColor && rawColor !== "null" ? (resolveColor(rawColor) ?? rawColor) : undefined;
     const icon = linearCalendarConfig.iconProperty ? entry.getValue(linearCalendarConfig.iconProperty)?.toString() : undefined;
     const title = linearCalendarConfig.titleProperty ? entry.getValue(linearCalendarConfig.titleProperty)?.toString() : entry.file.basename;
 
@@ -38,9 +42,10 @@ export const useCalendarItems = (
       id: entry.file.path,
       title,
       file: entry.file,
+      entry,
       startDate,
       endDate,
-      color: color === "null" ? undefined : color,
+      color,
       icon: icon === "null" ? undefined : icon,
     } as CalendarItem;
   })

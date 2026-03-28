@@ -19,12 +19,34 @@ export const ko = {
         title: "간격",
       },
     },
+    background: {
+      title: '배경',
+      inferFrom: {
+        title: '다음에서 추론',
+        active: '활성 항목',
+        'first-item': '첫 번째 항목'
+      },
+      gradient: {
+        title: '그라데이션',
+        dark: '어둡게',
+        light: '밝게',
+        none: '없음'
+      },
+      property: {
+        title: '속성'
+      }
+    },
     groups: {
       title: "그룹",
       layout: {
         title: "레이아웃",
         sections: "섹션",
         grid: "그리드",
+      },
+      direction: {
+        title: "방향",
+        horizontal: "수평",
+        vertical: "수직",
       },
       shape: {
         title: "모양",
@@ -36,6 +58,12 @@ export const ko = {
         group: "그룹",
         inline: "인라인",
         hidden: "숨김",
+      },
+      inferPropertiesFrom: {
+        title: "다음에서 속성 추론",
+        none: "없음",
+        "first-item": "첫 번째 항목",
+        "linked-note": "연결된 노트",
       },
       inferPropertiesFromLinkedNotes: {
         title: "연결된 노트에서 속성 추론",
@@ -77,6 +105,7 @@ export const ko = {
         none: "없음",
         inside: "내부",
         outside: "외부",
+        layout: "Layout",
       },
       font: {
         title: "글꼴 패밀리",
@@ -87,9 +116,17 @@ export const ko = {
       groupSubtitleProperty: {
         title: "그룹 부제목 속성",
       },
+      groupTitleFont: {
+        title: "그룹 글꼴 패밀리",
+      },
     },
     contents: {
       title: "콘텐츠",
+      position: {
+        title: "위치",
+        inside: "내부",
+        layout: "Layout",
+      },
       visibility: {
         title: '콘텐츠 표시',
         always: '항상 표시',
@@ -124,6 +161,9 @@ export const ko = {
         cover: "덮기",
         contain: "포함",
       },
+      thumbnail: {
+        title: "썸네일 속성",
+      },
     },
     colors: {
       title: "색상",
@@ -136,6 +176,9 @@ export const ko = {
         content: "콘텐츠",
         both: "둘 다",
       },
+      groupsProperty: {
+        title: "그룹 속성",
+      },
     },
     icons: {
       title: "아이콘",
@@ -144,6 +187,9 @@ export const ko = {
       },
       fileExtensionAsFallback: {
         title: "파일 확장자 아이콘을 폴백으로 사용",
+      },
+      groupsProperty: {
+        title: "그룹 속성",
       },
     },
     badges: {
@@ -166,6 +212,18 @@ export const ko = {
         inside: "내부",
         outside: "외부",
       }
+    },
+    active: {
+      title: '활성',
+      effect: {
+        title: '효과',
+        none: '없음',
+        tilted: '기울기',
+        bordered: '테두리'
+      },
+      aspectRatio: {
+        title: '종횡비'
+      },
     },
     actions: {
       title: '작업',
@@ -234,6 +292,14 @@ export const ko = {
         iconProperty: {
           title: "아이콘 속성",
         },
+        propertiesLayout: {
+          title: "속성 레이아웃",
+          vertical: "수직",
+          horizontal: "수평",
+        },
+        propertiesShowNames: {
+          title: "속성 이름 표시",
+        },
       },
     },
   },
@@ -267,11 +333,11 @@ export const ko = {
         title: "날짜 범위",
         startDate: {
           title: "시작 날짜",
-          placeholder: "YYYY-MM-DD",
+          placeholder: "YYYY-MM-DD or this.property",
         },
         endDate: {
           title: "종료 날짜",
-          placeholder: "YYYY-MM-DD",
+          placeholder: "YYYY-MM-DD or this.property",
         },
       },
       display: {
@@ -318,6 +384,16 @@ export const ko = {
         },
         colorScheme: {
           title: "색상 구성표",
+          custom: "사용자 지정",
+        },
+        contentScheme: {
+          title: "셀 내용",
+          none: "없음",
+          mood: "Mood",
+          food: "Food",
+          tree: "Tree",
+          numerical: "숫자",
+          alphabetical: "알파벳",
         },
         reverseColors: {
           title: "색상 반전",
@@ -387,6 +463,32 @@ export const ko = {
           title: "채우기 불투명도",
         },
       },
+    },
+  },
+  navigation: {
+    back: "뒤로",
+  },
+  groups: {
+    ungrouped: "없음",
+    totalItems: "{count}개 항목",
+    singleItem: "{count}개 항목",
+  },
+  colors: {
+    palettes: {
+      red: "빨강",
+      orange: "주황",
+      yellow: "노랑",
+      green: "초록",
+      cyan: "청록",
+      blue: "파랑",
+      purple: "보라",
+      magenta: "자홍",
+    },
+    schemes: {
+      primary: "기본",
+      semaphor: "신호등",
+      rainbow: "무지개",
+      contrast: "대비",
     },
   },
   common: {

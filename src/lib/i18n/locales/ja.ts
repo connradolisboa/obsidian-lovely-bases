@@ -19,12 +19,34 @@ export const ja = {
         title: "間隔",
       },
     },
+    background: {
+      title: '背景',
+      inferFrom: {
+        title: '推論元',
+        active: 'アクティブアイテム',
+        'first-item': '最初のアイテム'
+      },
+      gradient: {
+        title: 'グラデーション',
+        dark: 'ダーク',
+        light: 'ライト',
+        none: 'なし'
+      },
+      property: {
+        title: 'プロパティ'
+      }
+    },
     groups: {
       title: "グループ",
       layout: {
         title: "レイアウト",
         sections: "セクション",
         grid: "グリッド",
+      },
+      direction: {
+        title: "方向",
+        horizontal: "横",
+        vertical: "縦",
       },
       shape: {
         title: "形状",
@@ -36,6 +58,12 @@ export const ja = {
         group: "グループ",
         inline: "インライン",
         hidden: "非表示",
+      },
+      inferPropertiesFrom: {
+        title: "プロパティを推論元",
+        none: "なし",
+        "first-item": "最初のアイテム",
+        "linked-note": "リンクされたノート",
       },
       inferPropertiesFromLinkedNotes: {
         title: "リンクされたノートからプロパティを推測",
@@ -77,6 +105,7 @@ export const ja = {
         none: "なし",
         inside: "内側",
         outside: "外側",
+        layout: "Layout",
       },
       font: {
         title: "フォントファミリー",
@@ -87,9 +116,17 @@ export const ja = {
       groupSubtitleProperty: {
         title: "グループサブタイトルプロパティ",
       },
+      groupTitleFont: {
+        title: "グループフォントファミリー",
+      },
     },
     contents: {
       title: "コンテンツ",
+      position: {
+        title: "位置",
+        inside: "内側",
+        layout: "Layout",
+      },
       visibility: {
         title: 'コンテンツの表示',
         always: '常に表示',
@@ -124,6 +161,9 @@ export const ja = {
         cover: "カバー",
         contain: "含む",
       },
+      thumbnail: {
+        title: "サムネイルプロパティ",
+      },
     },
     colors: {
       title: "色",
@@ -136,6 +176,9 @@ export const ja = {
         content: "コンテンツ",
         both: "両方",
       },
+      groupsProperty: {
+        title: "グループプロパティ",
+      },
     },
     icons: {
       title: "アイコン",
@@ -144,6 +187,9 @@ export const ja = {
       },
       fileExtensionAsFallback: {
         title: "ファイル拡張子アイコンをフォールバックとして使用",
+      },
+      groupsProperty: {
+        title: "グループプロパティ",
       },
     },
     badges: {
@@ -166,6 +212,18 @@ export const ja = {
         inside: "内側",
         outside: "外側",
       }
+    },
+    active: {
+      title: 'アクティブ',
+      effect: {
+        title: 'エフェクト',
+        none: 'なし',
+        tilted: '傾き',
+        bordered: '枠付き'
+      },
+      aspectRatio: {
+        title: 'アスペクト比'
+      },
     },
     actions: {
       title: 'アクション',
@@ -234,6 +292,14 @@ export const ja = {
         iconProperty: {
           title: "アイコンプロパティ",
         },
+        propertiesLayout: {
+          title: "プロパティレイアウト",
+          vertical: "縦",
+          horizontal: "横",
+        },
+        propertiesShowNames: {
+          title: "プロパティ名を表示",
+        },
       },
     },
   },
@@ -267,11 +333,11 @@ export const ja = {
         title: "日付範囲",
         startDate: {
           title: "開始日",
-          placeholder: "YYYY-MM-DD",
+          placeholder: "YYYY-MM-DD or this.property",
         },
         endDate: {
           title: "終了日",
-          placeholder: "YYYY-MM-DD",
+          placeholder: "YYYY-MM-DD or this.property",
         },
       },
       display: {
@@ -318,6 +384,16 @@ export const ja = {
         },
         colorScheme: {
           title: "カラースキーム",
+          custom: "カスタム",
+        },
+        contentScheme: {
+          title: "セルコンテンツ",
+          none: "なし",
+          mood: "Mood",
+          food: "Food",
+          tree: "Tree",
+          numerical: "数値",
+          alphabetical: "アルファベット",
         },
         reverseColors: {
           title: "色を反転",
@@ -387,6 +463,32 @@ export const ja = {
           title: "塗りつぶしの不透明度",
         },
       },
+    },
+  },
+  navigation: {
+    back: "戻る",
+  },
+  groups: {
+    ungrouped: "なし",
+    totalItems: "{count} エントリ",
+    singleItem: "{count} エントリ",
+  },
+  colors: {
+    palettes: {
+      red: "赤",
+      orange: "オレンジ",
+      yellow: "黄",
+      green: "緑",
+      cyan: "シアン",
+      blue: "青",
+      purple: "紫",
+      magenta: "マゼンタ",
+    },
+    schemes: {
+      primary: "プライマリ",
+      semaphor: "セマフォ",
+      rainbow: "レインボー",
+      contrast: "コントラスト",
     },
   },
   common: {

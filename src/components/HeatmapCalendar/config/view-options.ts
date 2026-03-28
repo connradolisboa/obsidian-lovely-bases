@@ -1,4 +1,4 @@
-import type { ViewOption } from "obsidian";
+import type { ViewOption } from "@/lib/view-option-types";
 
 import { detectLocale,  type NamespacedTranslationKey, translate } from "@/lib/i18n";
 

@@ -19,12 +19,34 @@ export const ru = {
         title: "Отступ",
       },
     },
+    background: {
+      title: 'Фон',
+      inferFrom: {
+        title: 'Определить Из',
+        active: 'Активный Элемент',
+        'first-item': 'Первый Элемент'
+      },
+      gradient: {
+        title: 'Градиент',
+        dark: 'Тёмный',
+        light: 'Светлый',
+        none: 'Нет'
+      },
+      property: {
+        title: 'Свойство'
+      }
+    },
     groups: {
       title: "Группы",
       layout: {
         title: "Макет",
         sections: "Секции",
         grid: "Сетка",
+      },
+      direction: {
+        title: "Направление",
+        horizontal: "Горизонтальный",
+        vertical: "Вертикальный",
       },
       shape: {
         title: "Форма",
@@ -36,6 +58,12 @@ export const ru = {
         group: "Группировать",
         inline: "Встроенный",
         hidden: "Скрыто",
+      },
+      inferPropertiesFrom: {
+        title: "Определить Свойства Из",
+        none: "Нет",
+        "first-item": "Первый Элемент",
+        "linked-note": "Связанная Заметка",
       },
       inferPropertiesFromLinkedNotes: {
         title: "Выводить Свойства из Связанных Заметок",
@@ -77,6 +105,7 @@ export const ru = {
         none: "Нет",
         inside: "Внутри",
         outside: "Снаружи",
+        layout: "Layout",
       },
       font: {
         title: "Семейство Шрифтов",
@@ -87,9 +116,17 @@ export const ru = {
       groupSubtitleProperty: {
         title: "Свойство Подзаголовка Группы",
       },
+      groupTitleFont: {
+        title: "Семейство Шрифтов Группы",
+      },
     },
     contents: {
       title: "Контент",
+      position: {
+        title: "Позиция",
+        inside: "Внутри",
+        layout: "Layout",
+      },
       visibility: {
         title: 'Видимость Контента',
         always: 'Всегда Видимый',
@@ -124,6 +161,9 @@ export const ru = {
         cover: "Покрыть",
         contain: "Содержать",
       },
+      thumbnail: {
+        title: "Свойство Превью",
+      },
     },
     colors: {
       title: "Цвета",
@@ -136,6 +176,9 @@ export const ru = {
         content: "Контент",
         both: "Оба",
       },
+      groupsProperty: {
+        title: "Свойство Групп",
+      },
     },
     icons: {
       title: "Иконки",
@@ -144,6 +187,9 @@ export const ru = {
       },
       fileExtensionAsFallback: {
         title: "Использовать Иконки Расширения Файлов как Резерв",
+      },
+      groupsProperty: {
+        title: "Свойство Групп",
       },
     },
     badges: {
@@ -166,6 +212,18 @@ export const ru = {
         inside: "Внутри",
         outside: "Снаружи",
       }
+    },
+    active: {
+      title: 'Активный',
+      effect: {
+        title: 'Эффект',
+        none: 'Нет',
+        tilted: 'Наклонённый',
+        bordered: 'С Рамкой'
+      },
+      aspectRatio: {
+        title: 'Соотношение Сторон'
+      },
     },
     actions: {
       title: 'Действия',
@@ -234,6 +292,14 @@ export const ru = {
         iconProperty: {
           title: "Свойство Иконки",
         },
+        propertiesLayout: {
+          title: "Расположение Свойств",
+          vertical: "Вертикально",
+          horizontal: "Горизонтально",
+        },
+        propertiesShowNames: {
+          title: "Показать Имена Свойств",
+        },
       },
     },
   },
@@ -267,11 +333,11 @@ export const ru = {
         title: "Диапазон Дат",
         startDate: {
           title: "Дата Начала",
-          placeholder: "ГГГГ-ММ-ДД",
+          placeholder: "ГГГГ-ММ-ДД or this.property",
         },
         endDate: {
           title: "Дата Окончания",
-          placeholder: "ГГГГ-ММ-ДД",
+          placeholder: "ГГГГ-ММ-ДД or this.property",
         },
       },
       display: {
@@ -318,6 +384,16 @@ export const ru = {
         },
         colorScheme: {
           title: "Цветовая Схема",
+          custom: "Пользовательский",
+        },
+        contentScheme: {
+          title: "Содержимое Ячейки",
+          none: "Нет",
+          mood: "Mood",
+          food: "Food",
+          tree: "Tree",
+          numerical: "Числа",
+          alphabetical: "Алфавит",
         },
         reverseColors: {
           title: "Инвертировать Цвета",
@@ -387,6 +463,32 @@ export const ru = {
           title: "Непрозрачность Заливки",
         },
       },
+    },
+  },
+  navigation: {
+    back: "Назад",
+  },
+  groups: {
+    ungrouped: "Нет",
+    totalItems: "{count} записей",
+    singleItem: "{count} запись",
+  },
+  colors: {
+    palettes: {
+      red: "Красный",
+      orange: "Оранжевый",
+      yellow: "Жёлтый",
+      green: "Зелёный",
+      cyan: "Голубой",
+      blue: "Синий",
+      purple: "Фиолетовый",
+      magenta: "Пурпурный",
+    },
+    schemes: {
+      primary: "Основной",
+      semaphor: "Светофор",
+      rainbow: "Радуга",
+      contrast: "Контраст",
     },
   },
   common: {

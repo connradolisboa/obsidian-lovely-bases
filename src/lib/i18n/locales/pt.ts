@@ -19,12 +19,34 @@ export const pt = {
         title: "Espaçamento",
       },
     },
+    background: {
+      title: 'Fundo',
+      inferFrom: {
+        title: 'Inferir De',
+        active: 'Item Ativo',
+        'first-item': 'Primeiro Item'
+      },
+      gradient: {
+        title: 'Gradiente',
+        dark: 'Escuro',
+        light: 'Claro',
+        none: 'Nenhum'
+      },
+      property: {
+        title: 'Propriedade'
+      }
+    },
     groups: {
       title: "Grupos",
       layout: {
         title: "Layout",
         sections: "Seções",
         grid: "Grade",
+      },
+      direction: {
+        title: "Direção",
+        horizontal: "Horizontal",
+        vertical: "Vertical",
       },
       shape: {
         title: "Forma",
@@ -36,6 +58,12 @@ export const pt = {
         group: "Agrupar",
         inline: "Em linha",
         hidden: "Oculto",
+      },
+      inferPropertiesFrom: {
+        title: "Inferir Propriedades de",
+        none: "Nenhum",
+        "first-item": "Primeiro Item",
+        "linked-note": "Nota Vinculada",
       },
       inferPropertiesFromLinkedNotes: {
         title: "Inferir Propriedades de Notas Vinculadas",
@@ -77,6 +105,7 @@ export const pt = {
         none: "Nenhum",
         inside: "Interno",
         outside: "Externo",
+        layout: "Layout",
       },
       font: {
         title: "Família de Fonte",
@@ -87,9 +116,17 @@ export const pt = {
       groupSubtitleProperty: {
         title: "Propriedade de Subtítulo do Grupo",
       },
+      groupTitleFont: {
+        title: "Família de Fonte do Grupo",
+      },
     },
     contents: {
       title: "Conteúdos",
+      position: {
+        title: "Posição",
+        inside: "Interno",
+        layout: "Layout",
+      },
       visibility: {
         title: 'Visibilidade do Conteúdo',
         always: 'Sempre Visível',
@@ -124,6 +161,9 @@ export const pt = {
         cover: "Cobrir",
         contain: "Conter",
       },
+      thumbnail: {
+        title: "Propriedade de Miniatura",
+      },
     },
     colors: {
       title: "Cores",
@@ -136,6 +176,9 @@ export const pt = {
         content: "Conteúdo",
         both: "Ambos",
       },
+      groupsProperty: {
+        title: "Propriedade de Grupos",
+      },
     },
     icons: {
       title: "Ícones",
@@ -144,6 +187,9 @@ export const pt = {
       },
       fileExtensionAsFallback: {
         title: "Usar Ícones de Extensão de Arquivo como Fallback",
+      },
+      groupsProperty: {
+        title: "Propriedade de Grupos",
       },
     },
     badges: {
@@ -166,6 +212,18 @@ export const pt = {
         inside: "Interno",
         outside: "Externo",
       }
+    },
+    active: {
+      title: 'Ativo',
+      effect: {
+        title: 'Efeito',
+        none: 'Nenhum',
+        tilted: 'Inclinado',
+        bordered: 'Com Borda'
+      },
+      aspectRatio: {
+        title: 'Proporção'
+      },
     },
     actions: {
       title: 'Ações',
@@ -234,6 +292,14 @@ export const pt = {
         iconProperty: {
           title: "Propriedade de Ícone",
         },
+        propertiesLayout: {
+          title: "Layout de Propriedades",
+          vertical: "Vertical",
+          horizontal: "Horizontal",
+        },
+        propertiesShowNames: {
+          title: "Mostrar Nomes de Propriedade",
+        },
       },
     },
   },
@@ -267,11 +333,11 @@ export const pt = {
         title: "Intervalo de Datas",
         startDate: {
           title: "Data de Início",
-          placeholder: "AAAA-MM-DD",
+          placeholder: "AAAA-MM-DD or this.property",
         },
         endDate: {
           title: "Data de Fim",
-          placeholder: "AAAA-MM-DD",
+          placeholder: "AAAA-MM-DD or this.property",
         },
       },
       display: {
@@ -318,6 +384,16 @@ export const pt = {
         },
         colorScheme: {
           title: "Esquema de Cores",
+          custom: "Personalizado",
+        },
+        contentScheme: {
+          title: "Conteúdo da Célula",
+          none: "Nenhum",
+          mood: "Mood",
+          food: "Food",
+          tree: "Tree",
+          numerical: "Números",
+          alphabetical: "Alfabeto",
         },
         reverseColors: {
           title: "Inverter Cores",
@@ -387,6 +463,32 @@ export const pt = {
           title: "Opacidade de Preenchimento",
         },
       },
+    },
+  },
+  navigation: {
+    back: "Voltar",
+  },
+  groups: {
+    ungrouped: "Nenhum",
+    totalItems: "{count} entradas",
+    singleItem: "{count} entrada",
+  },
+  colors: {
+    palettes: {
+      red: "Vermelho",
+      orange: "Laranja",
+      yellow: "Amarelo",
+      green: "Verde",
+      cyan: "Ciano",
+      blue: "Azul",
+      purple: "Roxo",
+      magenta: "Magenta",
+    },
+    schemes: {
+      primary: "Primário",
+      semaphor: "Semáforo",
+      rainbow: "Arco-íris",
+      contrast: "Contraste",
     },
   },
   common: {

@@ -1,10 +1,8 @@
 
-import { useMemo } from "react";
-
 import { LinearCalendar } from "@/components/LinearCalendar";
 import type { LinearCalendarConfig } from "@/components/LinearCalendar/types";
 import { Container } from "@/components/Obsidian/Container";
-import { useObsidian } from "@/components/Obsidian/Context";
+import { useActiveFileProp } from "@/hooks/use-active-file-prop";
 import { useConfig } from "@/hooks/use-config";
 import type { ReactBaseViewProps } from "@/types";
 
@@ -19,8 +17,6 @@ const LinearCalendarView = ({
   onEntryClick,
   onEntryHover,
 }: ReactBaseViewProps) => {
-  const { app } = useObsidian();
-
   const linearCalendarConfig = useConfig<LinearCalendarConfig>(config, {
     focus: "full",
     startDateProperty: "note.start_date",
@@ -29,23 +25,17 @@ const LinearCalendarView = ({
     colorProperty: undefined,
     iconProperty: undefined,
     date: new Date().getFullYear().toString(),
+    propertiesLayout: "vertical",
+    propertiesShowNames: true,
   });
 
-  const resolvedDate = useMemo(() => {
-    const raw = linearCalendarConfig.date;
-    if (!raw?.startsWith("this.")) return raw;
-    const propName = raw.slice(5);
-    const activeFile = app.workspace.getActiveFile();
-    if (!activeFile) return undefined;
-    const frontmatter = app.metadataCache.getFileCache(activeFile)?.frontmatter;
-    const value = frontmatter?.[propName];
-    return value != null ? String(value) : undefined;
-  }, [linearCalendarConfig.date, app]);
+  const resolvedDate = useActiveFileProp(linearCalendarConfig.date);
 
   return (
     <Container isEmbedded={isEmbedded} style={{ userSelect: "none" }}>
       <LinearCalendar
         calendarConfig={{ ...linearCalendarConfig, date: resolvedDate }}
+        config={config}
         entries={data.data}
         onEntryClick={onEntryClick}
         onEntryHover={onEntryHover}

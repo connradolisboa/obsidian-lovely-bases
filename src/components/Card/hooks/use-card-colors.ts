@@ -2,7 +2,7 @@ import type { BasesEntry } from "obsidian";
 
 import type { FacetsConfig } from "@/components/Facets/config";
 import { useEntryPropertyValue } from "@/hooks/use-property";
-import { darken, lighten, luminance } from "@/lib/colors";
+import { darken, lighten, luminance, resolveColor } from "@/lib/colors";
 
 import type { CardColors, CardMedia } from "../types";
 
@@ -13,7 +13,8 @@ export function useCardColors(
 ): CardColors {
   const { colorApplyTo, colorProperty, cardLayout } = facetsConfig;
 
-  const backgroundColorValue = useEntryPropertyValue(entry, colorProperty) ?? undefined;
+  const rawColorValue = useEntryPropertyValue(entry, colorProperty) ?? undefined;
+  const backgroundColorValue = rawColorValue ? (resolveColor(rawColorValue) ?? rawColorValue) : undefined;
 
   const mediaBackground = colorApplyTo !== 'content' ?
     (media?.type === 'color' ? (media.value ?? undefined) : backgroundColorValue) : undefined;

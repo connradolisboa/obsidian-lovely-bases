@@ -6,7 +6,7 @@ import RadarChart from "@/components/RadarChart";
 import { COLOR_SCHEMES, type ColorScheme } from "@/components/RadarChart/constants";
 import { useConfig } from "@/hooks/use-config";
 import aggregate, { type AggregationFunction } from "@/lib/aggregate";
-import { isHexColor } from "@/lib/colors";
+import { resolveColor } from "@/lib/colors";
 import type { ReactBaseViewProps } from "@/types";
 
 
@@ -51,7 +51,7 @@ const RadarChartView = ({
 			typeof viewConfig.customColors === "string"
 				? viewConfig.customColors.split(",").map((c) => c.trim())
 				: viewConfig.customColors
-		).filter(isHexColor);
+		).map(resolveColor).filter(Boolean) as string[];
 
 		return customColors.length > 0 ? customColors : COLOR_SCHEMES[viewConfig.colorScheme ?? "primary"];
 	}, [viewConfig.customColors, viewConfig.colorScheme]);

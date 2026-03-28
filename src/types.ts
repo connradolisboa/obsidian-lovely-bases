@@ -1,4 +1,6 @@
-import type { BasesQueryResult, BasesViewConfig, BasesViewFactory, ViewOption } from "obsidian";
+import type { BasesQueryResult, BasesViewConfig, BasesViewFactory } from "obsidian";
+
+import type { ViewOption } from "@/lib/view-option-types";
 
 export type EntryClickEventHandler = (entryId: string, event: React.MouseEvent | React.KeyboardEvent) => void;
 export type EntryHoverEventHandler = (entryId: string, linkRef: React.RefObject<HTMLAnchorElement>, event: React.MouseEvent | React.KeyboardEvent) => void;

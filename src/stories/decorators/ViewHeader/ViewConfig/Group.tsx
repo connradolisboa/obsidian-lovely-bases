@@ -1,4 +1,4 @@
-import type { GroupOption } from "obsidian";
+import type { GroupOption } from "@/lib/view-option-types";
 import { type PropsWithChildren, useState } from "react";
 
 import LucideIcon from "@/components/Obsidian/LucideIcon";

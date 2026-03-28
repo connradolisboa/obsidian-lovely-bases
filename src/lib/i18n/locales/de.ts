@@ -19,12 +19,34 @@ export const de = {
         title: "Abstand",
       },
     },
+    background: {
+      title: 'Hintergrund',
+      inferFrom: {
+        title: 'Ableiten Von',
+        active: 'Aktives Element',
+        'first-item': 'Erstes Element'
+      },
+      gradient: {
+        title: 'Verlauf',
+        dark: 'Dunkel',
+        light: 'Hell',
+        none: 'Keine'
+      },
+      property: {
+        title: 'Eigenschaft'
+      }
+    },
     groups: {
       title: "Gruppen",
       layout: {
         title: "Layout",
         sections: "Sektionen",
         grid: "Raster",
+      },
+      direction: {
+        title: "Richtung",
+        horizontal: "Horizontal",
+        vertical: "Vertikal",
       },
       shape: {
         title: "Form",
@@ -36,6 +58,12 @@ export const de = {
         group: "Gruppieren",
         inline: "Inline",
         hidden: "Versteckt",
+      },
+      inferPropertiesFrom: {
+        title: "Eigenschaften Ableiten Von",
+        none: "Keine",
+        "first-item": "Erstes Element",
+        "linked-note": "Verknüpfte Notiz",
       },
       inferPropertiesFromLinkedNotes: {
         title: "Eigenschaften aus Verknüpften Notizen Ableiten",
@@ -77,6 +105,7 @@ export const de = {
         none: "Keine",
         inside: "Innen",
         outside: "Außen",
+        layout: "Layout",
       },
       font: {
         title: "Schriftfamilie",
@@ -87,9 +116,17 @@ export const de = {
       groupSubtitleProperty: {
         title: "Gruppenuntertitel-Eigenschaft",
       },
+      groupTitleFont: {
+        title: "Gruppen-Schriftfamilie",
+      },
     },
     contents: {
       title: "Inhalte",
+      position: {
+        title: "Position",
+        inside: "Innen",
+        layout: "Layout",
+      },
       visibility: {
         title: 'Inhalts-Sichtbarkeit',
         always: 'Immer sichtbar',
@@ -124,6 +161,9 @@ export const de = {
         cover: "Abdecken",
         contain: "Enthalten",
       },
+      thumbnail: {
+        title: "Vorschaubild-Eigenschaft",
+      },
     },
     colors: {
       title: "Farben",
@@ -136,6 +176,9 @@ export const de = {
         content: "Inhalt",
         both: "Beides",
       },
+      groupsProperty: {
+        title: "Gruppen-Eigenschaft",
+      },
     },
     icons: {
       title: "Symbole",
@@ -144,6 +187,9 @@ export const de = {
       },
       fileExtensionAsFallback: {
         title: "Dateierweiterungs-Symbole als Fallback Verwenden",
+      },
+      groupsProperty: {
+        title: "Gruppen-Eigenschaft",
       },
     },
     badges: {
@@ -166,6 +212,18 @@ export const de = {
         inside: "Innen",
         outside: "Außen",
       }
+    },
+    active: {
+      title: 'Aktiv',
+      effect: {
+        title: 'Effekt',
+        none: 'Keine',
+        tilted: 'Geneigt',
+        bordered: 'Umrandet'
+      },
+      aspectRatio: {
+        title: 'Seitenverhältnis'
+      },
     },
     actions: {
       title: 'Aktionen',
@@ -234,6 +292,14 @@ export const de = {
         iconProperty: {
           title: "Symbol-Eigenschaft",
         },
+        propertiesLayout: {
+          title: "Eigenschaften-Layout",
+          vertical: "Vertikal",
+          horizontal: "Horizontal",
+        },
+        propertiesShowNames: {
+          title: "Eigenschaftsnamen anzeigen",
+        },
       },
     },
   },
@@ -267,11 +333,11 @@ export const de = {
         title: "Datumsbereich",
         startDate: {
           title: "Startdatum",
-          placeholder: "JJJJ-MM-TT",
+          placeholder: "JJJJ-MM-TT or this.property",
         },
         endDate: {
           title: "Enddatum",
-          placeholder: "JJJJ-MM-TT",
+          placeholder: "JJJJ-MM-TT or this.property",
         },
       },
       display: {
@@ -318,6 +384,16 @@ export const de = {
         },
         colorScheme: {
           title: "Farbschema",
+          custom: "Benutzerdefiniert",
+        },
+        contentScheme: {
+          title: "Zelleninhalt",
+          none: "Keine",
+          mood: "Mood",
+          food: "Food",
+          tree: "Tree",
+          numerical: "Zahlen",
+          alphabetical: "Alphabet",
         },
         reverseColors: {
           title: "Farben Umkehren",
@@ -387,6 +463,32 @@ export const de = {
           title: "Fülldeckkraft",
         },
       },
+    },
+  },
+  navigation: {
+    back: "Zurück",
+  },
+  groups: {
+    ungrouped: "Keine",
+    totalItems: "{count} Einträge",
+    singleItem: "{count} Eintrag",
+  },
+  colors: {
+    palettes: {
+      red: "Rot",
+      orange: "Orange",
+      yellow: "Gelb",
+      green: "Grün",
+      cyan: "Cyan",
+      blue: "Blau",
+      purple: "Lila",
+      magenta: "Magenta",
+    },
+    schemes: {
+      primary: "Primär",
+      semaphor: "Ampel",
+      rainbow: "Regenbogen",
+      contrast: "Kontrast",
     },
   },
   common: {

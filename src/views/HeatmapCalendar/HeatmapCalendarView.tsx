@@ -5,8 +5,9 @@ import { HEATMAP_CALENDAR_CONFIG_DEFAULTS, type HeatmapCalendarConfig, type Trac
 import { MAX_DATE_RANGE_YEARS } from "@/components/HeatmapCalendar/constants";
 import { detectTrackType, extractTrackValue } from "@/components/HeatmapCalendar/utils";
 import { Container } from "@/components/Obsidian/Container";
+import { useActiveFileProp } from "@/hooks/use-active-file-prop";
 import { useConfig } from "@/hooks/use-config";
-import { isHexColor } from "@/lib/colors";
+import { resolveColor } from "@/lib/colors";
 import { FORMATS, format, parse, subYears } from "@/lib/date";
 import type { ReactBaseViewProps } from "@/types";
 
@@ -20,26 +21,29 @@ const HeatmapCalendarView = ({
 }: ReactBaseViewProps) => {
   const viewConfig = useConfig<HeatmapCalendarConfig>(config, HEATMAP_CALENDAR_CONFIG_DEFAULTS);
 
+  const rawStartDate = useActiveFileProp(viewConfig.startDate);
+  const rawEndDate = useActiveFileProp(viewConfig.endDate);
+
   const startDate = useMemo(() => {
     const now = new Date();
     const minAllowedDate = subYears(now, MAX_DATE_RANGE_YEARS);
 
-    if (viewConfig.startDate) {
-      const parsed = parse(viewConfig.startDate);
+    if (rawStartDate) {
+      const parsed = parse(rawStartDate);
       if (parsed && !Number.isNaN(parsed.getTime())) {
         return parsed < minAllowedDate ? minAllowedDate : parsed;
       }
     }
     return subYears(now, 1);
-  }, [viewConfig.startDate]);
+  }, [rawStartDate]);
 
   const endDate = useMemo(() => {
-    if (viewConfig.endDate) {
-      const parsed = parse(viewConfig.endDate);
+    if (rawEndDate) {
+      const parsed = parse(rawEndDate);
       if (parsed && !Number.isNaN(parsed.getTime())) return parsed;
     }
     return new Date();
-  }, [viewConfig.endDate]);
+  }, [rawEndDate]);
 
   const parsedCustomColors = useMemo(() => {
     if (!viewConfig.customColors) return undefined;
@@ -47,16 +51,14 @@ const HeatmapCalendarView = ({
     const colors = (typeof viewConfig.customColors === "string"
       ? (viewConfig.customColors as string).split(",").map((c) => c.trim())
       : viewConfig.customColors as string[]
-    ).filter(isHexColor);
+    ).map(resolveColor).filter(Boolean) as string[];
 
     return colors.length > 0 ? colors : undefined;
   }, [viewConfig.customColors]);
 
   const parsedOverflowColor = useMemo(() => {
     if (!viewConfig.overflowColor) return undefined;
-    return isHexColor(viewConfig.overflowColor.trim())
-      ? viewConfig.overflowColor.trim()
-      : undefined;
+    return resolveColor(viewConfig.overflowColor.trim()) ?? undefined;
   }, [viewConfig.overflowColor]);
 
   const groups = useMemo<

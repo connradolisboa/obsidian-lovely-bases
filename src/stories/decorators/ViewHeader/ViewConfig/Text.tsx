@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import type { PropertyOption, TextOption } from "obsidian";
+import type { PropertyOption, TextOption } from "@/lib/view-option-types";
 
 type Props = {
   option: PropertyOption | TextOption;

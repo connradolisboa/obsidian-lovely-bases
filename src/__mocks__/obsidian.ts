@@ -24,13 +24,13 @@ export type {
 	BasesViewFactory,
 	Component,
 	FrontMatterCache,
-	GroupOption,
 	Plugin,
 	QueryController,
 	RenderContext,
 	Value,
-	ViewOption,
 } from 'obsidian';
+
+export type { GroupOption, ViewOption } from '@/lib/view-option-types';
 
 import { createMockApp } from "./create-mock-app";
 

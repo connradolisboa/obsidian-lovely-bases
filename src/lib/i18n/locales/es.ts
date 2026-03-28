@@ -19,12 +19,34 @@ export const es = {
         title: "Espaciado",
       },
     },
+    background: {
+      title: 'Fondo',
+      inferFrom: {
+        title: 'Inferir De',
+        active: 'Elemento Activo',
+        'first-item': 'Primer Elemento'
+      },
+      gradient: {
+        title: 'Degradado',
+        dark: 'Oscuro',
+        light: 'Claro',
+        none: 'Ninguno'
+      },
+      property: {
+        title: 'Propiedad'
+      }
+    },
     groups: {
       title: "Grupos",
       layout: {
         title: "Diseño",
         sections: "Secciones",
         grid: "Cuadrícula",
+      },
+      direction: {
+        title: "Dirección",
+        horizontal: "Horizontal",
+        vertical: "Vertical",
       },
       shape: {
         title: "Forma",
@@ -36,6 +58,12 @@ export const es = {
         group: "Agrupar",
         inline: "En línea",
         hidden: "Oculto",
+      },
+      inferPropertiesFrom: {
+        title: "Inferir Propiedades de",
+        none: "Ninguno",
+        "first-item": "Primer Elemento",
+        "linked-note": "Nota Enlazada",
       },
       inferPropertiesFromLinkedNotes: {
         title: "Inferir Propiedades de Notas Enlazadas",
@@ -77,6 +105,7 @@ export const es = {
         none: "Ninguno",
         inside: "Dentro",
         outside: "Fuera",
+        layout: "Layout",
       },
       font: {
         title: "Familia de Fuente",
@@ -87,9 +116,17 @@ export const es = {
       groupSubtitleProperty: {
         title: "Propiedad de Subtítulo de Grupo",
       },
+      groupTitleFont: {
+        title: "Familia de Fuente del Grupo",
+      },
     },
     contents: {
       title: "Contenidos",
+      position: {
+        title: "Posición",
+        inside: "Dentro",
+        layout: "Layout",
+      },
       visibility: {
         title: 'Visibilidad del Contenido',
         always: 'Siempre Visible',
@@ -124,6 +161,9 @@ export const es = {
         cover: "Cubrir",
         contain: "Contener",
       },
+      thumbnail: {
+        title: "Propiedad de Miniatura",
+      },
     },
     colors: {
       title: "Colores",
@@ -136,6 +176,9 @@ export const es = {
         content: "Contenido",
         both: "Ambas",
       },
+      groupsProperty: {
+        title: "Propiedad de Grupos",
+      },
     },
     icons: {
       title: "Iconos",
@@ -144,6 +187,9 @@ export const es = {
       },
       fileExtensionAsFallback: {
         title: "Usar Iconos de Extensión de Archivo como Respaldo",
+      },
+      groupsProperty: {
+        title: "Propiedad de Grupos",
       },
     },
     badges: {
@@ -166,6 +212,18 @@ export const es = {
         inside: "Dentro",
         outside: "Fuera",
       }
+    },
+    active: {
+      title: 'Activo',
+      effect: {
+        title: 'Efecto',
+        none: 'Ninguno',
+        tilted: 'Inclinado',
+        bordered: 'Con Borde'
+      },
+      aspectRatio: {
+        title: 'Relación de Aspecto'
+      },
     },
     actions: {
       title: 'Acciones',
@@ -234,6 +292,14 @@ export const es = {
         iconProperty: {
           title: "Propiedad de Icono",
         },
+        propertiesLayout: {
+          title: "Diseño de Propiedades",
+          vertical: "Vertical",
+          horizontal: "Horizontal",
+        },
+        propertiesShowNames: {
+          title: "Mostrar Nombres de Propiedad",
+        },
       },
     },
   },
@@ -267,11 +333,11 @@ export const es = {
         title: "Rango de Fechas",
         startDate: {
           title: "Fecha de Inicio",
-          placeholder: "YYYY-MM-DD",
+          placeholder: "YYYY-MM-DD or this.property",
         },
         endDate: {
           title: "Fecha de Fin",
-          placeholder: "YYYY-MM-DD",
+          placeholder: "YYYY-MM-DD or this.property",
         },
       },
       display: {
@@ -318,6 +384,16 @@ export const es = {
         },
         colorScheme: {
           title: "Esquema de Colores",
+          custom: "Personalizado",
+        },
+        contentScheme: {
+          title: "Contenido de Celda",
+          none: "Ninguno",
+          mood: "Mood",
+          food: "Food",
+          tree: "Tree",
+          numerical: "Números",
+          alphabetical: "Alfabeto",
         },
         reverseColors: {
           title: "Invertir Colores",
@@ -387,6 +463,32 @@ export const es = {
           title: "Opacidad de Relleno",
         },
       },
+    },
+  },
+  navigation: {
+    back: "Volver",
+  },
+  groups: {
+    ungrouped: "Ninguno",
+    totalItems: "{count} entradas",
+    singleItem: "{count} entrada",
+  },
+  colors: {
+    palettes: {
+      red: "Rojo",
+      orange: "Naranja",
+      yellow: "Amarillo",
+      green: "Verde",
+      cyan: "Cian",
+      blue: "Azul",
+      purple: "Púrpura",
+      magenta: "Magenta",
+    },
+    schemes: {
+      primary: "Primario",
+      semaphor: "Semáforo",
+      rainbow: "Arcoíris",
+      contrast: "Contraste",
     },
   },
   common: {

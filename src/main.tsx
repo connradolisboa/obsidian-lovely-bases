@@ -1,4 +1,4 @@
-import { addIcon, Plugin } from "obsidian";
+import { addIcon, type BasesAllOptions, type BasesViewConfig, Plugin } from "obsidian";
 
 import type { BaseViewDef } from '@/types';
 
@@ -27,7 +27,7 @@ export default class LovelyBasesPlugin extends Plugin {
       name: def.name,
       icon: def.icon,
       factory: def.factory,
-      options: def.options,
+      options: def.options as (config: BasesViewConfig) => BasesAllOptions[],
     });
   }
 }

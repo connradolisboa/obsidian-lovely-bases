@@ -1,4 +1,4 @@
-import type { DropdownOption } from "obsidian";
+import type { DropdownOption } from "@/lib/view-option-types";
 
 type Props = {
   option: DropdownOption;

@@ -7,4 +7,6 @@ export const FULL_BASE_CONFIG: LinearCalendarConfig = {
   date: '2026',
   colorProperty: 'note.color',
   iconProperty: 'note.icon',
+  propertiesLayout: "vertical",
+  propertiesShowNames: true,
 };

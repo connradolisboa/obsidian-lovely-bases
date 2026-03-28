@@ -1,5 +1,5 @@
 
-import type { ToggleOption } from "obsidian";
+import type { ToggleOption } from "@/lib/view-option-types";
 
 type Props = {
   option: ToggleOption;

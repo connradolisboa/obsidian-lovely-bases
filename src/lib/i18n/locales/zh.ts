@@ -19,12 +19,34 @@ export const zh = {
         title: "间距",
       },
     },
+    background: {
+      title: '背景',
+      inferFrom: {
+        title: '从以下推断',
+        active: '活跃项目',
+        'first-item': '第一项'
+      },
+      gradient: {
+        title: '渐变',
+        dark: '深色',
+        light: '浅色',
+        none: '无'
+      },
+      property: {
+        title: '属性'
+      }
+    },
     groups: {
       title: "组",
       layout: {
         title: "布局",
         sections: "分区",
         grid: "网格",
+      },
+      direction: {
+        title: "方向",
+        horizontal: "水平",
+        vertical: "垂直",
       },
       shape: {
         title: "形状",
@@ -36,6 +58,12 @@ export const zh = {
         group: "分组",
         inline: "内联",
         hidden: "隐藏",
+      },
+      inferPropertiesFrom: {
+        title: "从以下推断属性",
+        none: "无",
+        "first-item": "第一项",
+        "linked-note": "链接笔记",
       },
       inferPropertiesFromLinkedNotes: {
         title: "从链接笔记推断属性",
@@ -77,6 +105,7 @@ export const zh = {
         none: "无",
         inside: "内部",
         outside: "外部",
+        layout: "Layout",
       },
       font: {
         title: "字体系列",
@@ -87,9 +116,17 @@ export const zh = {
       groupSubtitleProperty: {
         title: "组副标题属性",
       },
+      groupTitleFont: {
+        title: "组字体系列",
+      },
     },
     contents: {
       title: "内容",
+      position: {
+        title: "位置",
+        inside: "内部",
+        layout: "Layout",
+      },
       visibility: {
         title: '内容可见性',
         always: '始终可见',
@@ -124,6 +161,9 @@ export const zh = {
         cover: "覆盖",
         contain: "包含",
       },
+      thumbnail: {
+        title: "缩略图属性",
+      },
     },
     colors: {
       title: "颜色",
@@ -136,6 +176,9 @@ export const zh = {
         content: "内容",
         both: "两者",
       },
+      groupsProperty: {
+        title: "组属性",
+      },
     },
     icons: {
       title: "图标",
@@ -144,6 +187,9 @@ export const zh = {
       },
       fileExtensionAsFallback: {
         title: "使用文件扩展名图标作为后备",
+      },
+      groupsProperty: {
+        title: "组属性",
       },
     },
     badges: {
@@ -166,6 +212,18 @@ export const zh = {
         inside: "内部",
         outside: "外部",
       }
+    },
+    active: {
+      title: '活跃',
+      effect: {
+        title: '效果',
+        none: '无',
+        tilted: '倾斜',
+        bordered: '带边框'
+      },
+      aspectRatio: {
+        title: '宽高比'
+      },
     },
     actions: {
       title: '操作',
@@ -234,6 +292,14 @@ export const zh = {
         iconProperty: {
           title: "图标属性",
         },
+        propertiesLayout: {
+          title: "属性布局",
+          vertical: "垂直",
+          horizontal: "水平",
+        },
+        propertiesShowNames: {
+          title: "显示属性名称",
+        },
       },
     },
   },
@@ -267,11 +333,11 @@ export const zh = {
         title: "日期范围",
         startDate: {
           title: "开始日期",
-          placeholder: "YYYY-MM-DD",
+          placeholder: "YYYY-MM-DD or this.property",
         },
         endDate: {
           title: "结束日期",
-          placeholder: "YYYY-MM-DD",
+          placeholder: "YYYY-MM-DD or this.property",
         },
       },
       display: {
@@ -318,6 +384,16 @@ export const zh = {
         },
         colorScheme: {
           title: "配色方案",
+          custom: "自定义",
+        },
+        contentScheme: {
+          title: "单元格内容",
+          none: "无",
+          mood: "Mood",
+          food: "Food",
+          tree: "Tree",
+          numerical: "数字",
+          alphabetical: "字母",
         },
         reverseColors: {
           title: "反转颜色",
@@ -387,6 +463,32 @@ export const zh = {
           title: "填充不透明度",
         },
       },
+    },
+  },
+  navigation: {
+    back: "返回",
+  },
+  groups: {
+    ungrouped: "无",
+    totalItems: "{count} 个条目",
+    singleItem: "{count} 个条目",
+  },
+  colors: {
+    palettes: {
+      red: "红色",
+      orange: "橙色",
+      yellow: "黄色",
+      green: "绿色",
+      cyan: "青色",
+      blue: "蓝色",
+      purple: "紫色",
+      magenta: "洋红",
+    },
+    schemes: {
+      primary: "主色",
+      semaphor: "信号灯",
+      rainbow: "彩虹",
+      contrast: "对比",
     },
   },
   common: {
