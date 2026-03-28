@@ -305,6 +305,12 @@ export const ja = {
         propertiesShowNames: {
           title: "プロパティ名を表示",
         },
+        ganttTitleSize: {
+          title: "ファイル名サイズ",
+        },
+        ganttPropertiesSize: {
+          title: "プロパティサイズ",
+        },
       },
     },
   },

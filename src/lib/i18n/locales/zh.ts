@@ -305,6 +305,12 @@ export const zh = {
         propertiesShowNames: {
           title: "显示属性名称",
         },
+        ganttTitleSize: {
+          title: "文件名大小",
+        },
+        ganttPropertiesSize: {
+          title: "属性大小",
+        },
       },
     },
   },

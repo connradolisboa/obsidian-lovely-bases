@@ -305,6 +305,12 @@ export const it = {
         propertiesShowNames: {
           title: "Mostra Nomi Proprietà",
         },
+        ganttTitleSize: {
+          title: "Dimensione Nome File",
+        },
+        ganttPropertiesSize: {
+          title: "Dimensione Proprietà",
+        },
       },
     },
   },

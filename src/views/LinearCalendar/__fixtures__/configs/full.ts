@@ -10,4 +10,6 @@ export const FULL_BASE_CONFIG: LinearCalendarConfig = {
   iconProperty: 'note.icon',
   propertiesLayout: "vertical",
   propertiesShowNames: true,
+  ganttTitleSize: 12,
+  ganttPropertiesSize: 9,
 };

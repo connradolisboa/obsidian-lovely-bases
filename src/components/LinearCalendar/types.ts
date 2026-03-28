@@ -31,4 +31,6 @@ export type LinearCalendarConfig = {
   date?: string;
   propertiesLayout: "vertical" | "horizontal";
   propertiesShowNames: boolean;
+  ganttTitleSize: number;
+  ganttPropertiesSize: number;
 };

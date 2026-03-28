@@ -328,6 +328,12 @@ export const en = {
         propertiesShowNames: {
           title: "Show Property Names",
         },
+        ganttTitleSize: {
+          title: "File Name Size",
+        },
+        ganttPropertiesSize: {
+          title: "Properties Size",
+        },
       },
     },
   },

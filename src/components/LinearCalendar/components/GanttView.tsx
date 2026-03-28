@@ -73,7 +73,7 @@ export default function GanttView({
   const getDayOffset = (date: Date): number =>
     Math.floor((date.getTime() - timelineStart.getTime()) / MS_PER_DAY);
 
-  const { propertiesLayout, propertiesShowNames } = calendarConfig;
+  const { propertiesLayout, propertiesShowNames, ganttTitleSize, ganttPropertiesSize } = calendarConfig;
 
   return (
     <div className="flex flex-col w-full h-full overflow-auto bg-background text-foreground">
@@ -151,7 +151,7 @@ export default function GanttView({
         const widthPx = widthDays * DAY_WIDTH;
 
         const propertyItems =
-          visibleProperties.length > 0 && widthPx > 60
+          visibleProperties.length > 0
             ? visibleProperties
                 .map((propId) => {
                   const value = item.entry.getValue(propId);
@@ -172,7 +172,7 @@ export default function GanttView({
           propertiesLayout === "horizontal" && hasProps ? 1 : propertyItems.length;
         const propsHeight =
           propRows > 0 ? propRows * PROP_LINE_HEIGHT + PROPS_PADDING : 0;
-        const barHeight = 20 + propsHeight;
+        const barHeight = 20;
 
         return (
           <div
@@ -181,10 +181,40 @@ export default function GanttView({
             style={{ minHeight: `${Math.max(ROW_HEIGHT, barHeight + 8)}px` }}
           >
             {/* Sticky title column */}
-            <div className="w-32 shrink-0 px-2 py-1 flex items-start sticky left-0 z-10 bg-background border-r border-border/60">
-              <span className="text-xs truncate leading-tight pt-1">
+            <div className="w-32 shrink-0 px-2 py-1 flex flex-col items-start sticky left-0 z-10 bg-background border-r border-border/60">
+              <span className="truncate leading-tight pt-1 w-full" style={{ fontSize: `${ganttTitleSize}px` }}>
                 {item.title}
               </span>
+              {hasProps && (
+                <div
+                  className={cn(
+                    "mt-0.5 w-full",
+                    propertiesLayout === "horizontal"
+                      ? "flex flex-row flex-wrap gap-x-2 gap-y-0"
+                      : "flex flex-col",
+                  )}
+                >
+                  {propertyItems.map((propItem) => (
+                    <div
+                      key={propItem!.propId}
+                      className="leading-[14px] text-muted-foreground truncate [&_a]:text-muted-foreground [&_a]:underline [&_a]:underline-offset-1"
+                      style={{ fontSize: `${ganttPropertiesSize}px` }}
+                    >
+                      {propertiesShowNames && (
+                        <span className="opacity-60">
+                          {propItem!.displayName}:{" "}
+                        </span>
+                      )}
+                      <PropertyValue
+                        renderContext={renderContext}
+                        as="span"
+                        className="inline"
+                        value={propItem!.value}
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Timeline area */}
@@ -234,36 +264,6 @@ export default function GanttView({
                   )}
                   {widthPx > 40 ? item.title : null}
                 </span>
-
-                {hasProps && propertyItems.length > 0 && (
-                  <div
-                    className={cn(
-                      "mt-0.5",
-                      propertiesLayout === "horizontal"
-                        ? "flex flex-row flex-wrap gap-x-2 gap-y-0"
-                        : "flex flex-col",
-                    )}
-                  >
-                    {propertyItems.map((propItem) => (
-                      <div
-                        key={propItem!.propId}
-                        className="text-[9px] leading-[14px] text-white/90 truncate [&_a]:text-white/90 [&_a]:underline [&_a]:underline-offset-1"
-                      >
-                        {propertiesShowNames && (
-                          <span className="text-white/60">
-                            {propItem!.displayName}:{" "}
-                          </span>
-                        )}
-                        <PropertyValue
-                          renderContext={renderContext}
-                          as="span"
-                          className="inline"
-                          value={propItem!.value}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                )}
               </div>
             </div>
           </div>

@@ -10,4 +10,6 @@ export const DEFAULT_BASE_CONFIG: LinearCalendarConfig = {
   iconProperty: undefined,
   propertiesLayout: "vertical",
   propertiesShowNames: true,
+  ganttTitleSize: 12,
+  ganttPropertiesSize: 9,
 };

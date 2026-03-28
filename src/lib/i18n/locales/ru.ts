@@ -305,6 +305,12 @@ export const ru = {
         propertiesShowNames: {
           title: "Показать Имена Свойств",
         },
+        ganttTitleSize: {
+          title: "Размер Имени Файла",
+        },
+        ganttPropertiesSize: {
+          title: "Размер Свойств",
+        },
       },
     },
   },

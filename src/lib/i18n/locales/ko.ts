@@ -305,6 +305,12 @@ export const ko = {
         propertiesShowNames: {
           title: "속성 이름 표시",
         },
+        ganttTitleSize: {
+          title: "파일 이름 크기",
+        },
+        ganttPropertiesSize: {
+          title: "속성 크기",
+        },
       },
     },
   },

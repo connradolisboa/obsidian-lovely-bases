@@ -28,6 +28,8 @@ const LinearCalendarView = ({
     date: new Date().getFullYear().toString(),
     propertiesLayout: "vertical",
     propertiesShowNames: true,
+    ganttTitleSize: 12,
+    ganttPropertiesSize: 9,
   });
 
   const resolvedDate = useActiveFileProp(linearCalendarConfig.date);

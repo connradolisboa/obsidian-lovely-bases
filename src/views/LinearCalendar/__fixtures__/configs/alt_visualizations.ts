@@ -8,4 +8,6 @@ export const ALT_VISUALIZATIONS_BASE_CONFIG: LinearCalendarConfig = {
   date: "2026",
   propertiesLayout: "vertical",
   propertiesShowNames: true,
+  ganttTitleSize: 12,
+  ganttPropertiesSize: 9,
 };

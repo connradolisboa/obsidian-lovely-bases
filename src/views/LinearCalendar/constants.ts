@@ -20,6 +20,8 @@ export const DEFAULTS: LinearCalendarConfig = {
   /* Properties */
   propertiesLayout: "vertical",
   propertiesShowNames: true,
+  ganttTitleSize: 12,
+  ganttPropertiesSize: 9,
 };
 
 export const LINEAR_CALENDAR_OPTIONS: ViewOption[] = [
@@ -112,6 +114,26 @@ export const LINEAR_CALENDAR_OPTIONS: ViewOption[] = [
         displayName: t("options.appearance.propertiesShowNames.title"),
         key: "propertiesShowNames",
         default: DEFAULTS.propertiesShowNames,
+      },
+      {
+        type: "slider",
+        displayName: t("options.appearance.ganttTitleSize.title"),
+        key: "ganttTitleSize",
+        default: DEFAULTS.ganttTitleSize,
+        min: 8,
+        max: 24,
+        step: 1,
+        shouldHide: (config) => config.get("layout") !== "horizontal",
+      },
+      {
+        type: "slider",
+        displayName: t("options.appearance.ganttPropertiesSize.title"),
+        key: "ganttPropertiesSize",
+        default: DEFAULTS.ganttPropertiesSize,
+        min: 7,
+        max: 20,
+        step: 1,
+        shouldHide: (config) => config.get("layout") !== "horizontal",
       },
     ],
   },
