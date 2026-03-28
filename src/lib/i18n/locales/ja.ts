@@ -286,6 +286,11 @@ export const ja = {
       },
       appearance: {
         title: "外観",
+        layout: {
+          title: "方向",
+          vertical: "縦",
+          horizontal: "横 (ガント)",
+        },
         colorProperty: {
           title: "色プロパティ",
         },

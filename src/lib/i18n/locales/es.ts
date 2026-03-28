@@ -286,6 +286,11 @@ export const es = {
       },
       appearance: {
         title: "Apariencia",
+        layout: {
+          title: "Orientación",
+          vertical: "Vertical",
+          horizontal: "Horizontal (Gantt)",
+        },
         colorProperty: {
           title: "Propiedad de Color",
         },

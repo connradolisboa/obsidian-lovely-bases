@@ -14,6 +14,7 @@ export const DEFAULTS: LinearCalendarConfig = {
   date: undefined,
   focus: "full",
   /* Appearance */
+  layout: "vertical",
   colorProperty: undefined,
   iconProperty: undefined,
   /* Properties */
@@ -74,6 +75,16 @@ export const LINEAR_CALENDAR_OPTIONS: ViewOption[] = [
     type: "group",
     displayName: t("options.appearance.title"),
     items: [
+      {
+        type: "dropdown",
+        displayName: t("options.appearance.layout.title"),
+        key: "layout",
+        default: DEFAULTS.layout,
+        options: {
+          vertical: t("options.appearance.layout.vertical"),
+          horizontal: t("options.appearance.layout.horizontal"),
+        },
+      },
       {
         type: "property",
         displayName: t("options.appearance.colorProperty.title"),

@@ -19,6 +19,7 @@ const LinearCalendarView = ({
 }: ReactBaseViewProps) => {
   const linearCalendarConfig = useConfig<LinearCalendarConfig>(config, {
     focus: "full",
+    layout: "vertical",
     startDateProperty: "note.start_date",
     endDateProperty: undefined,
     titleProperty: undefined,

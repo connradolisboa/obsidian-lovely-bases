@@ -286,6 +286,11 @@ export const ko = {
       },
       appearance: {
         title: "외관",
+        layout: {
+          title: "방향",
+          vertical: "세로",
+          horizontal: "가로 (간트)",
+        },
         colorProperty: {
           title: "색상 속성",
         },

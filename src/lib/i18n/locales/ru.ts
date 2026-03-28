@@ -286,6 +286,11 @@ export const ru = {
       },
       appearance: {
         title: "Внешний вид",
+        layout: {
+          title: "Ориентация",
+          vertical: "Вертикальная",
+          horizontal: "Горизонтальная (Гант)",
+        },
         colorProperty: {
           title: "Свойство Цвета",
         },

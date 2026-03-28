@@ -22,6 +22,7 @@ export type StackedEvent = CalendarItem & {
 
 export type LinearCalendarConfig = {
   focus: "full" | "half" | "quarter";
+  layout: "vertical" | "horizontal";
   startDateProperty?: BasesPropertyId;
   endDateProperty?: BasesPropertyId;
   titleProperty?: BasesPropertyId;

@@ -3,6 +3,7 @@ import { useMemo } from "react";
 
 import type { EntryClickEventHandler, EntryHoverEventHandler } from "@/types";
 
+import GanttView from "./components/GanttView";
 import Header from "./components/Header";
 import Row from "./components/Row";
 import { useCalendarItems } from "./hooks/use-calendar-items";
@@ -40,6 +41,20 @@ export const LinearCalendar = ({
     () => config.getOrder(),
     [config],
   );
+
+  if (calendarConfig.layout === "horizontal") {
+    return (
+      <GanttView
+        calendarConfig={calendarConfig}
+        config={config}
+        items={items}
+        monthIndices={monthIndices}
+        currentYear={currentYear}
+        onEntryClick={onEntryClick}
+        visibleProperties={visibleProperties}
+      />
+    );
+  }
 
   return (
     <div className="flex flex-col w-full h-full overflow-auto bg-background text-foreground">

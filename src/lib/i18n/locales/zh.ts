@@ -286,6 +286,11 @@ export const zh = {
       },
       appearance: {
         title: "外观",
+        layout: {
+          title: "方向",
+          vertical: "垂直",
+          horizontal: "水平 (甘特)",
+        },
         colorProperty: {
           title: "颜色属性",
         },
