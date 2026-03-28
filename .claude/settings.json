@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /Users/connrado/Repositories/obsidian-lovely-bases && npm run build 2>/dev/null || true",
+            "statusMessage": "Building..."
+          }
+        ]
+      }
+    ]
+  }
+}

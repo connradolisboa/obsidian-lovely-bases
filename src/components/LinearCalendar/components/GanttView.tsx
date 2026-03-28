@@ -76,7 +76,8 @@ export default function GanttView({
   const { propertiesLayout, propertiesShowNames, ganttTitleSize, ganttPropertiesSize } = calendarConfig;
 
   return (
-    <div className="flex flex-col w-full h-full overflow-auto bg-background text-foreground">
+    <div className="w-full h-full overflow-auto bg-background text-foreground">
+    <div className="flex flex-col" style={{ minWidth: `${totalWidth + 128}px` }}>
       {/* Sticky header */}
       <div className="sticky top-0 z-10 bg-background border-b border-border">
         {/* Month name row */}
@@ -269,6 +270,7 @@ export default function GanttView({
           </div>
         );
       })}
+    </div>
     </div>
   );
 }
